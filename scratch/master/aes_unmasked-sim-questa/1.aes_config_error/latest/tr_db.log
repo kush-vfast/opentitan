@@ -1,0 +1,7 @@
+  CREATE_STREAM @0 ps {NAME:aes_stress_vseq T:Transactions SCOPE:uvm_test_top.env.virtual_sequencer STREAM:3060}
+  CREATE_STREAM @0 ps {NAME:<unknown> T:Transactions SCOPE:uvm_test_top.env.m_edn_pull_agent[0].sequencer STREAM:3089}
+  CREATE_STREAM @0 ps {NAME:ping_seq T:Transactions SCOPE:uvm_test_top.env.m_alert_agent_recov_ctrl_update_err.sequencer STREAM:3113}
+  CREATE_STREAM @0 ps {NAME:alert_receiver_alert_rsp_seq T:Transactions SCOPE:uvm_test_top.env.m_alert_agent_recov_ctrl_update_err.sequencer STREAM:3116}
+  CREATE_STREAM @0 ps {NAME:ping_seq T:Transactions SCOPE:uvm_test_top.env.m_alert_agent_fatal_fault.sequencer STREAM:3139}
+  CREATE_STREAM @0 ps {NAME:alert_receiver_alert_rsp_seq T:Transactions SCOPE:uvm_test_top.env.m_alert_agent_fatal_fault.sequencer STREAM:3142}
+  CREATE_STREAM @5123000 ps {NAME:aes_stress_vseq T:Transactions SCOPE:uvm_test_top.env.keymgr_sideload_agent.sequencer STREAM:3878}

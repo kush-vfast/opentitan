@@ -1,0 +1,1732 @@
+QuestaSim-64 qrun 2025.2 Utility 2025.05 May 31 2025
+Start time: 12:59:00 on Nov 20,2026
+qrun -simulate "+uvm_set_verbosity=uvm_test_top.env.scoreboard,_ALL_,UVM_MEDIUM,run" "+cdc_instrumentation_enabled=1" "+UVM_NO_RELNOTES" "+UVM_VERBOSITY=UVM_LOW" -outdir /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out -sv_lib /cadtools/mentor/Questa_2025.2/questasim/uvm-1.2/linux_x86_64/uvm_dpi -sv_seed 4 -suppress vsim-8323 -permit_unmatched_virtual_intf "+UVM_TESTNAME=aes_smoke_test" "+UVM_TEST_SEQ=aes_stress_vseq" -do "/home/kthakkar/opentitan_new/opentitan/hw/dv/tools/questa/sim.tcl" -ldflags "-lcrypto" 
+** Note: (qrun-220) '/cadtools/mentor/Questa_2025.2/questasim/linux_x86_64/../modelsim.ini' is used as the ini file.
+** Note: (vsim-220) '/cadtools/mentor/Questa_2025.2/questasim/linux_x86_64/../modelsim.ini' is used as the ini file.
+vsim "+uvm_set_verbosity=uvm_test_top.env.scoreboard,_ALL_,UVM_MEDIUM,run" "+cdc_instrumentation_enabled=1" "+UVM_NO_RELNOTES" "+UVM_VERBOSITY=UVM_LOW" -sv_lib /cadtools/mentor/Questa_2025.2/questasim/uvm-1.2/linux_x86_64/uvm_dpi -sv_seed 4 -permit_unmatched_virtual_intf "+UVM_TESTNAME=aes_smoke_test" "+UVM_TEST_SEQ=aes_stress_vseq" -ldflags "-lcrypto" -lib /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out/work -c -do "/home/kthakkar/opentitan_new/opentitan/hw/dv/tools/questa/sim.tcl" -statslog /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/qrun.out/stats_log qrun_opt -suppress 8323 -appendlog -l qrun.log 
+Start time: 12:59:06 on Nov 20,2026
+# Loading /tmp/kthakkar@VFSRV02_dpi_97885/linux_x86_64_gcc-10.3.0/export_tramp.so
+//  Questa Sim-64
+//  Version 2025.2 linux_x86_64 May 31 2025
+//
+// Unpublished work. Copyright 2025 Siemens
+//
+// This material contains trade secrets or otherwise confidential information
+// owned by Siemens Industry Software Inc. or its affiliates (collectively,
+// "SISW"), or its licensors. Access to and use of this information is strictly
+// limited as set forth in the Customer's applicable agreements with SISW.
+//
+// This material may not be copied, distributed, or otherwise disclosed outside
+// of the Customer's facilities without the express written permission of SISW,
+// and may not be used in any way not expressly authorized by SISW.
+//
+Loading sv_std.std
+Loading work.uvm_pkg_sv_unit(fast)
+Loading work.aes_bind(fast)
+Loading work.prim_mubi_pkg(fast)
+Loading work.aes_cov_bind(fast)
+Loading work.sec_cm_prim_sparse_fsm_flop_bind(fast)
+Loading work.sec_cm_prim_onehot_check_bind(fast)
+** Note: (vsim-8785) UVM-aware debugging capabilities will be disabled since no compiled "questa_uvm_pkg" can be found.
+This also means that later if you turn on UVM-aware debugging your debug simulations may have
+different random seeds from your non-debug simulations.
+Loading work.keymgr_dpe_reg_pkg(fast)
+Loading work.keymgr_dpe_pkg(fast)
+Loading work.key_sideload_if(fast)
+Loading work.clk_rst_if(fast)
+Loading work.pins_if(fast)
+Loading work.aes_reseed_if(fast)
+Loading work.aes_masking_reseed_if(fast)
+Loading work.force_if(fast)
+Loading work.fi_control_if(fast)
+Loading work.fi_cipher_if(fast)
+Loading work.fi_ctr_fsm_if(fast)
+Loading work.fi_ghash_if(fast)
+Loading work.fi_core_if(fast)
+Loading work.aes_cov_if(fast)
+Loading work.rst_shadowed_if(fast)
+Loading work.prim_util_pkg(fast)
+Loading work.aes_reg_pkg(fast)
+Loading work.aes_pkg(fast)
+Loading work.tl_if(fast)
+Loading work.alert_if(fast)
+Loading work.push_pull_if(fast)
+Loading work.uvm_pkg(fast)
+Loading work.nist_vectors_gcm_pkg(fast)
+Loading work.nist_vectors_pkg(fast)
+Loading work.aes_model_dpi_pkg(fast)
+Loading work.dv_test_status_pkg(fast)
+Loading work.str_utils_pkg(fast)
+Loading work.top_pkg(fast)
+Loading work.bus_params_pkg(fast)
+Loading work.dv_utils_pkg(fast)
+Loading work.dv_base_agent_pkg(fast)
+Loading work.dv_base_reg_pkg(fast)
+Loading work.csr_utils_pkg(fast)
+Loading work.dv_lib_pkg(fast)
+Loading work.key_sideload_agent_pkg(fast)
+Loading work.aes_ral_pkg(fast)
+Loading work.lc_ctrl_reg_pkg(fast)
+Loading work.lc_ctrl_state_pkg(fast)
+Loading work.lc_ctrl_pkg(fast)
+Loading work.prim_alert_pkg(fast)
+Loading work.sec_cm_pkg(fast)
+Loading work.push_pull_agent_pkg(fast)
+Loading work.alert_agent_pkg(fast)
+Loading work.mem_model_pkg(fast)
+Loading work.prim_secded_pkg(fast)
+Loading work.tlul_pkg(fast)
+Loading work.tl_agent_pkg(fast)
+Loading work.cip_base_pkg(fast)
+Loading work.aes_env_pkg(fast)
+Loading work.aes_err_injection_bind(fast)
+Loading work.aes_test_pkg(fast)
+Loading work.tb(fast)
+Loading work.common_ifs_pkg(fast)
+Loading work.clk_rst_if(fast__2)
+Loading work.rst_shadowed_if(fast__2)
+Loading work.pins_if(fast__4)
+Loading work.pins_if(fast__5)
+Loading work.tl_if(fast__2)
+Loading work.key_sideload_if(fast__2)
+Loading work.entropy_src_pkg(fast)
+Loading work.csrng_reg_pkg(fast)
+Loading work.csrng_pkg(fast)
+Loading work.edn_pkg(fast)
+Loading work.aes(fast)
+Loading work.prim_subreg_pkg(fast)
+Loading work.aes_reg_top(fast)
+Loading work.tlul_cmd_intg_chk(fast)
+Loading work.prim_secded_inv_64_57_dec(fast)
+Loading work.tlul_data_integ_dec(fast)
+Loading work.prim_secded_inv_39_32_dec(fast)
+Loading work.prim_reg_we_check(fast)
+Loading work.prim_buf(fast)
+Loading work.prim_onehot_check(fast)
+Loading work.prim_onehot_check_if(fast__1)
+Loading work.tlul_rsp_intg_gen(fast)
+Loading work.prim_secded_inv_64_57_enc(fast)
+Loading work.tlul_data_integ_enc(fast)
+Loading work.prim_secded_inv_39_32_enc(fast)
+Loading work.tlul_adapter_reg(fast)
+Loading work.tlul_rsp_intg_gen(fast__1)
+Loading work.tlul_err(fast)
+Loading work.prim_subreg_ext(fast)
+Loading work.prim_subreg(fast)
+Loading work.prim_subreg_arb(fast)
+Loading work.prim_subreg_ext(fast__1)
+Loading work.prim_flop(fast)
+Loading work.prim_subreg(fast__1)
+Loading work.prim_subreg_arb(fast__1)
+Loading work.prim_subreg_ext(fast__2)
+Loading work.prim_subreg_ext(fast__3)
+Loading work.prim_subreg_ext(fast__4)
+Loading work.prim_subreg_shadow(fast)
+Loading work.prim_subreg_arb(fast__2)
+Loading work.prim_subreg(fast__2)
+Loading work.prim_subreg_shadow(fast__1)
+Loading work.prim_subreg(fast__3)
+Loading work.prim_subreg(fast__4)
+Loading work.prim_subreg_arb(fast__3)
+Loading work.prim_subreg(fast__5)
+Loading work.prim_subreg(fast__6)
+Loading work.prim_subreg_arb(fast__4)
+Loading work.prim_subreg_ext(fast__5)
+Loading work.prim_lc_sync(fast)
+Loading work.prim_flop_2sync(fast)
+Loading work.prim_cdc_rand_delay(fast)
+Loading work.prim_flop(fast__1)
+Loading work.prim_sec_anchor_buf(fast)
+Loading work.prim_buf(fast__1)
+Loading work.prim_sync_reqack_data(fast)
+Loading work.prim_sync_reqack(fast)
+Loading work.prim_flop_2sync(fast__1)
+Loading work.prim_cdc_rand_delay(fast__1)
+Loading work.aes_core(fast)
+Loading work.aes_prng_clearing(fast)
+Loading work.prim_cipher_pkg(fast)
+Loading work.prim_lfsr(fast)
+Loading work.prim_sec_anchor_buf(fast__1)
+Loading work.prim_buf(fast__2)
+Loading work.prim_sec_anchor_buf(fast__2)
+Loading work.prim_buf(fast__3)
+Loading work.aes_ctr(fast)
+Loading work.aes_sel_buf_chk(fast)
+Loading work.prim_buf(fast__4)
+Loading work.aes_ctr_fsm_p(fast)
+Loading work.prim_buf(fast__5)
+Loading work.aes_ctr_fsm(fast)
+Loading work.prim_sparse_fsm_flop(fast)
+Loading work.prim_flop(fast__2)
+Loading work.prim_sparse_fsm_flop_if(fast__1)
+Loading work.signal_force(fast)
+Loading work.force_if(fast__4)
+Loading work.fi_ctr_fsm_wrapper(fast)
+Loading work.fi_ctr_fsm_if(fast__2)
+Loading work.prim_buf(fast__6)
+Loading work.aes_ctr_fsm_n(fast)
+Loading work.prim_buf(fast__7)
+Loading work.aes_cipher_core(fast)
+Loading work.aes_sub_bytes(fast)
+Loading work.aes_sel_buf_chk(fast__1)
+Loading work.prim_sec_anchor_buf(fast__3)
+Loading work.aes_sbox(fast)
+Loading work.aes_sbox_canright_pkg(fast)
+Loading work.aes_sbox_canright(fast)
+Loading work.aes_shift_rows(fast)
+Loading work.aes_mix_columns(fast)
+Loading work.aes_mix_single_column(fast)
+Loading work.aes_key_expand(fast)
+Loading work.aes_cipher_control(fast)
+Loading work.aes_cipher_control_fsm_p(fast)
+Loading work.prim_buf(fast__8)
+Loading work.aes_cipher_control_fsm(fast)
+Loading work.prim_sparse_fsm_flop(fast__1)
+Loading work.prim_flop(fast__3)
+Loading work.prim_sparse_fsm_flop_if(fast__2)
+Loading work.signal_force(fast__1)
+Loading work.force_if(fast__5)
+Loading work.fi_cipher_fsm_wrapper(fast)
+Loading work.fi_cipher_if(fast__2)
+Loading work.prim_buf(fast__9)
+Loading work.aes_cipher_control_fsm_n(fast)
+Loading work.prim_flop(fast__4)
+Loading work.aes_sel_buf_chk(fast__2)
+Loading work.prim_sec_anchor_buf(fast__4)
+Loading work.prim_buf(fast__10)
+Loading work.aes_sel_buf_chk(fast__3)
+Loading work.aes_ctrl_reg_shadowed(fast)
+Loading work.prim_subreg_shadow(fast__2)
+Loading work.prim_subreg_arb(fast__5)
+Loading work.prim_subreg(fast__7)
+Loading work.prim_subreg_shadow(fast__3)
+Loading work.prim_subreg_arb(fast__6)
+Loading work.prim_subreg(fast__8)
+Loading work.prim_subreg_shadow(fast__4)
+Loading work.prim_subreg_arb(fast__7)
+Loading work.prim_subreg(fast__9)
+Loading work.prim_subreg_shadow(fast__5)
+Loading work.prim_subreg_arb(fast__8)
+Loading work.prim_subreg(fast__10)
+Loading work.aes_ctrl_gcm_reg_shadowed(fast)
+Loading work.aes_control(fast)
+Loading work.aes_control_fsm_p(fast)
+Loading work.prim_buf(fast__11)
+Loading work.aes_control_fsm(fast)
+Loading work.prim_sparse_fsm_flop(fast__2)
+Loading work.prim_sparse_fsm_flop_if(fast__3)
+Loading work.aes_reg_status(fast)
+Loading work.aes_reg_status(fast__1)
+Loading work.signal_force(fast__2)
+Loading work.force_if(fast__6)
+Loading work.fi_control_fsm_wrapper(fast)
+Loading work.fi_control_if(fast__2)
+Loading work.prim_buf(fast__12)
+Loading work.aes_control_fsm_p(fast__1)
+Loading work.aes_control_fsm(fast__1)
+Loading work.aes_control_fsm_n(fast)
+Loading work.aes_sel_buf_chk(fast__4)
+Loading work.prim_sec_anchor_buf(fast__5)
+Loading work.prim_buf(fast__13)
+Loading work.fi_core_wrapper(fast)
+Loading work.fi_core_if(fast__2)
+Loading work.prim_alert_sender(fast)
+Loading work.prim_sec_anchor_buf(fast__6)
+Loading work.prim_diff_decode(fast)
+Loading work.prim_flop_2sync(fast__2)
+Loading work.prim_flop(fast__5)
+Loading work.prim_sec_anchor_flop(fast)
+Loading work.prim_flop(fast__6)
+Loading work.prim_alert_sender(fast__1)
+Loading work.aes_cov_if(fast__2)
+Loading work.cip_lc_tx_cov_if(fast__1)
+Loading work.tlul_assert(fast)
+Loading work.aes_csr_assert_fpv(fast)
+Loading work.aes_idle_check(fast)
+Loading work.aes_reseed_if(fast__2)
+Loading work.push_pull_if(fast__2)
+Loading work.alert_if(fast__2)
+Loading work.clk_rst_if(fast__3)
+Compiling /tmp/kthakkar@VFSRV02_dpi_97885/linux_x86_64_gcc-10.3.0/exportwrapper.c
+# Loading /tmp/kthakkar@VFSRV02_dpi_97885/linux_x86_64_gcc-10.3.0/vsim_auto_compile.so
+# Loading /cadtools/mentor/Questa_2025.2/questasim/uvm-1.2/linux_x86_64/uvm_dpi.so
+do /home/kthakkar/opentitan_new/opentitan/hw/dv/tools/questa/sim.tcl
+0
+0
+tb.dut.u_aes_core.u_aes_prng_clearing.u_lfsr.p_randomize_default_seed: DefaultSeed = 0xc32d580f74f1713a, DefaultSeedLocal = 0xc32d580f74f1713a
+UVM_INFO @ 0 ps: reporter [RNTST] Running test aes_smoke_test...
+UVM_INFO @         0 ps: (aes_env_cfg.sv:196) [cfg] Use KEY MAST: 0
+UVM_INFO @         0 ps: (aes_env_cfg.sv:196) [cfg] Use KEY MAST: 0
+UVM_INFO @         0 ps: (aes_env_cfg.sv:196) [cfg] Use KEY MAST: 0
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 0 ps  Iteration: 13  Process: /uvm_pkg::uvm_phase::m_run_phases/#FORK#2213_7feff0959ef File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_dv_lib_0/dv_base_env.sv Line: 91
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 0 ps  Iteration: 55  Process: /cip_base_pkg::cip_base_scoreboard #(aes_ral_pkg::aes_reg_block, aes_env_pkg::aes_env_cfg, aes_env_pkg::aes_env_cov)::check_alerts/#FORK#305_7feff099469 File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_cip_lib_0/cip_base_scoreboard.sv Line: 320
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 0 ps  Iteration: 55  Process: /cip_base_pkg::cip_base_scoreboard #(aes_ral_pkg::aes_reg_block, aes_env_pkg::aes_env_cfg, aes_env_pkg::aes_env_cov)::check_alerts/#FORK#305_7feff0994ec File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_cip_lib_0/cip_base_scoreboard.sv Line: 320
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_ctr_fsm_if.sv:114) [tb.dut.u_aes_core.u_aes_ctr.gen_fsm[0].gen_fsm_p.u_aes_ctr_fsm_i.u_aes_ctr_fsm.u_control_ctr_fsm_fi.fi_if] Creating covergroup aes_ctr_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_ctr_fsm_if.sv:114) [tb.dut.u_aes_core.u_aes_ctr.gen_fsm[1].gen_fsm_p.u_aes_ctr_fsm_i.u_aes_ctr_fsm.u_control_ctr_fsm_fi.fi_if] Creating covergroup aes_ctr_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_ctr_fsm_if.sv:114) [tb.dut.u_aes_core.u_aes_ctr.gen_fsm[2].gen_fsm_n.u_aes_ctr_fsm_i.u_aes_ctr_fsm.u_control_ctr_fsm_fi.fi_if] Creating covergroup aes_ctr_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_cipher_if.sv:241) [tb.dut.u_aes_core.u_aes_cipher_core.u_aes_cipher_control.gen_fsm[0].gen_fsm_p.u_aes_cipher_control_fsm_i.u_aes_cipher_control_fsm.u_control_cipher_fi.fi_if] Creating covergroup aes_cipher_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_cipher_if.sv:241) [tb.dut.u_aes_core.u_aes_cipher_core.u_aes_cipher_control.gen_fsm[1].gen_fsm_p.u_aes_cipher_control_fsm_i.u_aes_cipher_control_fsm.u_control_cipher_fi.fi_if] Creating covergroup aes_cipher_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_cipher_if.sv:241) [tb.dut.u_aes_core.u_aes_cipher_core.u_aes_cipher_control.gen_fsm[2].gen_fsm_n.u_aes_cipher_control_fsm_i.u_aes_cipher_control_fsm.u_control_cipher_fi.fi_if] Creating covergroup aes_cipher_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_control_if.sv:211) [tb.dut.u_aes_core.u_aes_control.gen_fsm[0].gen_fsm_p.u_aes_control_fsm_i.u_aes_control_fsm.u_fi_ctrl_fsm.fi_if] Creating covergroup aes_ctrl_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_control_if.sv:211) [tb.dut.u_aes_core.u_aes_control.gen_fsm[1].gen_fsm_p.u_aes_control_fsm_i.u_aes_control_fsm.u_fi_ctrl_fsm.fi_if] Creating covergroup aes_ctrl_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_control_if.sv:211) [tb.dut.u_aes_core.u_aes_control.gen_fsm[2].gen_fsm_n.u_aes_control_fsm_i.u_aes_control_fsm.u_fi_ctrl_fsm.fi_if] Creating covergroup aes_ctrl_fsm_cg
+1000 ps: (src/lowrisc_dv_aes_err_injection_0.1/fi_core_if.sv:104) [tb.dut.u_aes_core.u_core_fi.fi_if] Creating covergroup aes_core_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:377) [tb.dut.u_aes_cov_if] Creating covergroup aes_aux_regwen_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:378) [tb.dut.u_aes_cov_if] Creating covergroup aes_ctrl_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:379) [tb.dut.u_aes_cov_if] Creating covergroup aes_status_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:380) [tb.dut.u_aes_cov_if] Creating covergroup aes_trigger_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:381) [tb.dut.u_aes_cov_if] Creating covergroup aes_alert_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:382) [tb.dut.u_aes_cov_if] Creating covergroup aes_wr_data_interleave_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:383) [tb.dut.u_aes_cov_if] Creating covergroup aes_rd_data_interleave_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:384) [tb.dut.u_aes_cov_if] Creating covergroup aes_iv_interleave_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:385) [tb.dut.u_aes_cov_if] Creating covergroup aes_key_interleave_cg
+1000 ps: (src/lowrisc_dv_aes_cov_0/aes_cov_if.sv:386) [tb.dut.u_aes_cov_if] Creating covergroup aes_reg_interleave_cg
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 5348 ps  Iteration: 1  Process: /cip_base_pkg::cip_base_scoreboard #(aes_ral_pkg::aes_reg_block, aes_env_pkg::aes_env_cfg, aes_env_pkg::aes_env_cov)::check_alerts/#FORK#305_7feff0994ec File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_cip_lib_0/cip_base_scoreboard.sv Line: 320
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 5348 ps  Iteration: 1  Process: /cip_base_pkg::cip_base_scoreboard #(aes_ral_pkg::aes_reg_block, aes_env_pkg::aes_env_cfg, aes_env_pkg::aes_env_cov)::check_alerts/#FORK#305_7feff099469 File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_cip_lib_0/cip_base_scoreboard.sv Line: 320
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 2629501 ps  Iteration: 3  Process: /cip_base_pkg::cip_base_scoreboard #(aes_ral_pkg::aes_reg_block, aes_env_pkg::aes_env_cfg, aes_env_pkg::aes_env_cov)::check_alerts/#FORK#305_7feff099469 File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_cip_lib_0/cip_base_scoreboard.sv Line: 320
+** Warning: (vsim-3829) Non-existent associative array entry. Returning default value.
+   Time: 2629501 ps  Iteration: 3  Process: /cip_base_pkg::cip_base_scoreboard #(aes_ral_pkg::aes_reg_block, aes_env_pkg::aes_env_cfg, aes_env_pkg::aes_env_cov)::check_alerts/#FORK#305_7feff0994ec File: /home/kthakkar/opentitan_new/opentitan/scratch/master/aes_unmasked-sim-questa/default/fusesoc-work/src/lowrisc_dv_cip_lib_0/cip_base_scoreboard.sv Line: 320
+UVM_INFO @   3185061 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 00
+UVM_INFO @   3185061 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 0 
+	 output lost 0  
+UVM_INFO @   3462841 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 00
+UVM_INFO @   3462841 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 0 
+	 output lost 0  
+UVM_INFO @   3879511 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 00
+UVM_INFO @   3879511 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 0 
+	 output lost 0  
+UVM_INFO @   4101735 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @   4101735 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @   4157291 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   4351737 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   4601739 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   4657295 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @   4657295 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @   4990631 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   5101743 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - ctrl_shadowed data 1105
+UVM_INFO @   5379523 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   5907305 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   6073973 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   6268419 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - ctrl_aux_shadowed data 00
+UVM_INFO @   6546199 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   6907313 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   7212871 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   7685097 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   7740653 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - ctrl_aux_shadowed data 00
+UVM_INFO @   7879543 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   8351769 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   8657327 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   9018441 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   9268443 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - ctrl_aux_shadowed data 00
+UVM_INFO @   9268443 ps: (aes_stress_vseq.sv:13) uvm_test_top.env.virtual_sequencer [uvm_test_top.env.virtual_sequencer.aes_stress_vseq] 
+
+	 ----| STARTING AES MAIN SEQUENCE |----
+ 
+	 ----| AES ENVIRONMENT CONFIG 	 
+	 ----| Max Number of message           6 	 
+	 ----| Min Number of message           1 	 
+	 ----| Max message len          32 bytes 	 
+	 ----| Min message len          16 bytes 	 
+	 ----| Max aad len          32 bytes     	 
+	 ----| Min aad len           0 bytes     	 
+	 ----| Host response speed Slow   	 
+	 ----| Reference model:	    OPEN_SSL              	 
+	 ----| num_messages #           6 	 
+	 ----| ECB Weight:          10         	 
+	 ----| CBC Weight:          10         	 
+	 ----| CFB Weight:          10         	 
+	 ----| GCM Weight:           0         	 
+	 ----| OFB Weight:          10         	 
+	 ----| CTR Weight:          10         	 
+	 ----| key mask:   1         	 
+	 ----| inj delay:           42         	 
+
+UVM_INFO @   9268443 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @   9268443 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @   9268443 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @   9323999 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   9462889 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @   9462889 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @   9685113 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @   9768447 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @   9768447 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  10046227 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @  10212895 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  10212895 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  10490675 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @  10685121 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @  12185133 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  12185133 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  12657359 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  12657359 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  16407389 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  16407389 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  18046291 ps: (aes_scoreboard.sv:228) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+Write to Trigger register observed: 0x00000001
+UVM_INFO @  18046291 ps: (aes_scoreboard.sv:436) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 AES INPUT ITEM RECEIVED - 
+ 
+	 ----| AES SEQUENCE ITEM                                  |----	 
+	 ----| Item Type:    	 AES_CFG                          |----	 
+	 ----| AES Mode:    	 AES_ECB                          |----	 
+	 ----| Operation:    	 AES_DEC                          |----	 
+	 ----| Key len:    	 128b  	(001)                           |----	 
+	 ----| Key Share 0: 	 9c2ed02b 15707a15 acd7c219 e759eb2f 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1: 	 f1505781 a2f33647 1f31752b 29034476 00000000 00000000 00000000 00000000 
+	 ----| Initialization vector:         	 00000000 00000000 00000000 00000000 
+	 ----| key_mask: 	 1 |----	  	
+	 ----| Data Length: 	  0 |----	  	
+	 ----| Input data:  	 000000af000000f10000002c0000008a |----	 
+	 ----| Output data: 	 00000000000000000000000000000000 |----	 
+	 
+	 split message: 0
+UVM_INFO @  18518517 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 00
+UVM_INFO @  18518517 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 0 
+	 output lost 0  
+UVM_INFO @  18879631 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 19
+UVM_INFO @  18879631 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  19101855 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_3 data d1dafcff
+UVM_INFO @  19657415 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_1 data afc14a42
+UVM_INFO @  20018529 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_2 data 826f09f3
+UVM_INFO @  20268531 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_0 data 64ae9919
+UVM_INFO @  20268531 ps: (aes_scoreboard.sv:616) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rebuilding AES_ECB message, adding start item
+UVM_INFO @  20629645 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  20629645 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  21796321 ps: (aes_scoreboard.sv:228) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+Write to Trigger register observed: 0x00000001
+UVM_INFO @  21796321 ps: (aes_scoreboard.sv:436) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 AES INPUT ITEM RECEIVED - 
+ 
+	 ----| AES SEQUENCE ITEM                                  |----	 
+	 ----| Item Type:    	 AES_CFG                          |----	 
+	 ----| AES Mode:    	 AES_ECB                          |----	 
+	 ----| Operation:    	 AES_DEC                          |----	 
+	 ----| Key len:    	 128b  	(001)                           |----	 
+	 ----| Key Share 0: 	 9c2ed02b 15707a15 acd7c219 e759eb2f 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1: 	 f1505781 a2f33647 1f31752b 29034476 00000000 00000000 00000000 00000000 
+	 ----| Initialization vector:         	 00000000 00000000 00000000 00000000 
+	 ----| key_mask: 	 1 |----	  	
+	 ----| Data Length: 	  0 |----	  	
+	 ----| Input data:  	 000000000000516958cb54ecbdd01bb6 |----	 
+	 ----| Output data: 	 00000000000000000000000000000000 |----	 
+	 
+	 split message: 0
+UVM_INFO @  22379659 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 19
+UVM_INFO @  22379659 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  22824107 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_1 data 4b077276
+UVM_INFO @  23351889 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_3 data ad2b2b01
+UVM_INFO @  23629669 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_0 data 72a42f00
+UVM_INFO @  24018561 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  24018561 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  24018561 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  24018561 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_2 data 9b15d636
+UVM_INFO @  24018561 ps: (aes_scoreboard.sv:644) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rebuilding AES_ECB message, adding data block #1
+UVM_INFO @  24296341 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  24296341 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  24463009 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  24463009 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  24851901 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  24851901 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  25240793 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  25240793 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  25379683 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  25740797 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  26213023 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  26296357 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  26296357 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  26518581 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  26685249 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  26685249 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  26740805 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  26851917 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  26851917 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  27185253 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  27463033 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  27740813 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  27963037 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  28407485 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  28657487 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  28768599 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  29101935 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  29407493 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  29629717 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  29740829 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  30074165 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  30268611 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  30768615 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  30879727 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  31101951 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  31296397 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  31713067 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  31990847 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  32296405 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  32490851 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  32518629 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  32518629 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  32657519 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  32796409 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  33129745 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  33324191 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  33324191 ps: (aes_scoreboard.sv:436) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 AES INPUT ITEM RECEIVED - 
+ 
+	 ----| AES SEQUENCE ITEM                                  |----	 
+	 ----| Item Type:    	 AES_CFG                          |----	 
+	 ----| AES Mode:    	 AES_CTR                          |----	 
+	 ----| Operation:    	 AES_DEC                          |----	 
+	 ----| Key len:    	 128b  	(001)                           |----	 
+	 ----| Key Share 0: 	 02295f20 ca44b621 47a538f9 1fd3f1ed 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1: 	 c69e2de8 6c494695 34fa9186 9bc309a6 00000000 00000000 00000000 00000000 
+	 ----| Initialization vector:         	 79b373f1 70636327 fbec496b 142feba3 
+	 ----| key_mask: 	 1 |----	  	
+	 ----| Data Length: 	  0 |----	  	
+	 ----| Input data:  	 000000550000009d000000f000000049 |----	 
+	 ----| Output data: 	 00000000000000000000000000000000 |----	 
+	 
+	 split message: 0
+UVM_INFO @  33601971 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  33601971 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  33740861 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 10
+UVM_INFO @  33740861 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 0 
+	 output lost 0  
+UVM_INFO @  33879751 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  33879751 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  34046419 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 19
+UVM_INFO @  34046419 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  34324199 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  34324199 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  34518645 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_3 data e1290a6a
+UVM_INFO @  34657535 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  34657535 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  34685313 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_2 data 9de63408
+UVM_INFO @  34879759 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  34879759 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  35101983 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_0 data c4bc85f4
+UVM_INFO @  35296429 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  35296429 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  35435319 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_1 data 1f141d80
+UVM_INFO @  35435319 ps: (aes_scoreboard.sv:627) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] adding AES_ECB message item of size 32 to msg_fifo
+UVM_INFO @  35435319 ps: (aes_scoreboard.sv:640) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rebuilding AES_CTR message, adding start item
+UVM_INFO @  35435319 ps: (aes_scoreboard.sv:764) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| printing MESSAGE 
+	 ----| AES MESSAGE ITEM
+	 ----| 
+	 ----| Message Length:       32
+	 ----| AAD Length:           0
+	 ----| Operation:            AES_DEC
+	 ----| Mode:                 AES_ECB
+	 ----| Key Length:           001
+	 ----| Key Share 0:          9c2ed02b 15707a15 acd7c219 e759eb2f 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1:          f1505781 a2f33647 1f31752b 29034476 00000000 00000000 00000000 00000000 
+	 ----| Key Mask:             0
+	 ----| Initialization vector: 00000000 00000000 00000000 00000000 
+	 ----| Sideload:             0
+	 ----| Manual Operation:     0
+	
+UVM_INFO @  35435319 ps: (aes_scoreboard.sv:806) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----|   MESSAGE #0 MATCHED  AES_ECB  |-----
+UVM_INFO @  35574209 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  35574209 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  35879767 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  35879767 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  36018657 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  36018657 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  36101991 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  36101991 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  36546439 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  36546439 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  36796441 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  36796441 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 1, key clean? 1, IV clean? 1
+UVM_INFO @  36796441 ps: (aes_scoreboard.sv:436) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 AES INPUT ITEM RECEIVED - 
+ 
+	 ----| AES SEQUENCE ITEM                                  |----	 
+	 ----| Item Type:    	 AES_CFG                          |----	 
+	 ----| AES Mode:    	 AES_CTR                          |----	 
+	 ----| Operation:    	 AES_DEC                          |----	 
+	 ----| Key len:    	 128b  	(001)                           |----	 
+	 ----| Key Share 0: 	 02295f20 ca44b621 47a538f9 1fd3f1ed 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1: 	 c69e2de8 6c494695 34fa9186 9bc309a6 00000000 00000000 00000000 00000000 
+	 ----| Initialization vector:         	 79b373f1 70636327 fbec496b 142feba3 
+	 ----| key_mask: 	 1 |----	  	
+	 ----| Data Length: 	  0 |----	  	
+	 ----| Input data:  	 0000000000000000000000000000001f |----	 
+	 ----| Output data: 	 00000000000000000000000000000000 |----	 
+	 
+	 split message: 0
+UVM_INFO @  37240889 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  37240889 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  37268667 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 19
+UVM_INFO @  37268667 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  37546447 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  37546447 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  37824227 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_2 data 2062099e
+UVM_INFO @  37935339 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  37935339 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  38129785 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_3 data ce879499
+UVM_INFO @  38324231 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  38324231 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  38379787 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_1 data 51ba5b07
+UVM_INFO @  38713123 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  38713123 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  38963125 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  38963125 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  38963125 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  38963125 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_0 data 8c13ed9e
+UVM_INFO @  38963125 ps: (aes_scoreboard.sv:644) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rebuilding AES_CTR message, adding data block #1
+UVM_INFO @  39213127 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  39213127 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  39240905 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  39240905 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  39379795 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  39379795 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  39518685 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  39518685 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  39824243 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  39824243 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  39990911 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  39990911 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  40240913 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @  40768695 ps: (aes_scoreboard.sv:371) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_ECB
+UVM_INFO @  42268707 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  42268707 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  42490931 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  42490931 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  47324303 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  47324303 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  48463201 ps: (aes_scoreboard.sv:228) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+Write to Trigger register observed: 0x00000001
+UVM_INFO @  48463201 ps: (aes_scoreboard.sv:436) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 AES INPUT ITEM RECEIVED - 
+ 
+	 ----| AES SEQUENCE ITEM                                  |----	 
+	 ----| Item Type:    	 AES_CFG                          |----	 
+	 ----| AES Mode:    	 AES_ECB                          |----	 
+	 ----| Operation:    	 AES_DEC                          |----	 
+	 ----| Key len:    	 128b  	(001)                           |----	 
+	 ----| Key Share 0: 	 0c6a97c9 2a7d232a 8801c636 5fa4376f 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1: 	 d349c247 ef2146fa a3378027 0ef3afba 00000000 00000000 00000000 00000000 
+	 ----| Initialization vector:         	 79b373f1 70636327 fbec496b 142feba3 
+	 ----| key_mask: 	 1 |----	  	
+	 ----| Data Length: 	  0 |----	  	
+	 ----| Input data:  	 000000500000004600000033000000a0 |----	 
+	 ----| Output data: 	 00000000000000000000000000000000 |----	 
+	 
+	 split message: 0
+UVM_INFO @  49102095 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 10
+UVM_INFO @  49102095 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 0 
+	 output lost 0  
+UVM_INFO @  49407653 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 19
+UVM_INFO @  49407653 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  49935435 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_3 data 70a54db7
+UVM_INFO @  50324327 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_2 data bb2358f0
+UVM_INFO @  50574329 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_1 data b91f6ede
+UVM_INFO @  50852109 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_0 data e187c4db
+UVM_INFO @  50852109 ps: (aes_scoreboard.sv:627) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] adding AES_CTR message item of size 32 to msg_fifo
+UVM_INFO @  50852109 ps: (aes_scoreboard.sv:640) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rebuilding AES_ECB message, adding start item
+UVM_INFO @  50852109 ps: (aes_scoreboard.sv:764) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| printing MESSAGE 
+	 ----| AES MESSAGE ITEM
+	 ----| 
+	 ----| Message Length:       32
+	 ----| AAD Length:           0
+	 ----| Operation:            AES_DEC
+	 ----| Mode:                 AES_CTR
+	 ----| Key Length:           001
+	 ----| Key Share 0:          02295f20 ca44b621 47a538f9 1fd3f1ed 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1:          c69e2de8 6c494695 34fa9186 9bc309a6 00000000 00000000 00000000 00000000 
+	 ----| Key Mask:             0
+	 ----| Initialization vector: 79b373f1 70636327 fbec496b 142feba3 
+	 ----| Sideload:             0
+	 ----| Manual Operation:     0
+	
+UVM_INFO @  50852109 ps: (aes_scoreboard.sv:806) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----|   MESSAGE #1 MATCHED  AES_CTR  |-----
+UVM_INFO @  51213223 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  51213223 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  52574345 ps: (aes_scoreboard.sv:228) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+Write to Trigger register observed: 0x00000001
+UVM_INFO @  52574345 ps: (aes_scoreboard.sv:436) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 AES INPUT ITEM RECEIVED - 
+ 
+	 ----| AES SEQUENCE ITEM                                  |----	 
+	 ----| Item Type:    	 AES_CFG                          |----	 
+	 ----| AES Mode:    	 AES_ECB                          |----	 
+	 ----| Operation:    	 AES_DEC                          |----	 
+	 ----| Key len:    	 128b  	(001)                           |----	 
+	 ----| Key Share 0: 	 0c6a97c9 2a7d232a 8801c636 5fa4376f 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1: 	 d349c247 ef2146fa a3378027 0ef3afba 00000000 00000000 00000000 00000000 
+	 ----| Initialization vector:         	 79b373f1 70636327 fbec496b 142feba3 
+	 ----| key_mask: 	 1 |----	  	
+	 ----| Data Length: 	  0 |----	  	
+	 ----| Input data:  	 0000000000006f96082a75236149ebad |----	 
+	 ----| Output data: 	 00000000000000000000000000000000 |----	 
+	 
+	 split message: 0
+UVM_INFO @  52991015 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 10
+UVM_INFO @  52991015 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 0 
+	 output lost 0  
+UVM_INFO @  53463241 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 19
+UVM_INFO @  53463241 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  53741021 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_1 data 5ec30542
+UVM_INFO @  54102135 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_3 data 8ff47006
+UVM_INFO @  54518805 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_0 data 2001d89f
+UVM_INFO @  54713251 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  54713251 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  54713251 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_2 data a6cabbe9
+UVM_INFO @  54713251 ps: (aes_scoreboard.sv:644) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rebuilding AES_ECB message, adding data block #1
+UVM_INFO @  54907697 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  54907697 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  55463257 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  55463257 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  55602147 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  55602147 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  55963261 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  55963261 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  56102151 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  56296597 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  56741045 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  56824379 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  56824379 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  56879935 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  57074381 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  57074381 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  57268827 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  57518829 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  57518829 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  57657719 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  57852165 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  58018833 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  58296613 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  58574393 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  58741061 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  58991063 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  59241065 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  59379955 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  59685513 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  59935515 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  60213295 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  60268851 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  60518853 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  60602187 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  60907745 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  61185525 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  61435527 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  61713307 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  61935531 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  62129977 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  62352201 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  62352201 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  62657759 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  62935539 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  63185541 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  63435543 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  63435543 ps: (aes_scoreboard.sv:436) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 AES INPUT ITEM RECEIVED - 
+ 
+	 ----| AES SEQUENCE ITEM                                  |----	 
+	 ----| Item Type:    	 AES_CFG                          |----	 
+	 ----| AES Mode:    	 AES_CTR                          |----	 
+	 ----| Operation:    	 AES_DEC                          |----	 
+	 ----| Key len:    	 192b  	(010)                           |----	 
+	 ----| Key Share 0: 	 966f0756 37c0c40f 226ae38e a012d4de a089682b fd6c7ee7 00000000 00000000 
+	 ----| Key Share 1: 	 c697d920 255cbe66 2a7907cb 44f04668 f9a67483 32fbf358 00000000 00000000 
+	 ----| Initialization vector:         	 f4802413 4530113e d18ca887 06c8b9c3 
+	 ----| key_mask: 	 1 |----	  	
+	 ----| Data Length: 	  0 |----	  	
+	 ----| Input data:  	 000000250000009f000000ed0000008e |----	 
+	 ----| Output data: 	 00000000000000000000000000000000 |----	 
+	 
+	 split message: 0
+UVM_INFO @  63907769 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  63907769 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  64102215 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 19
+UVM_INFO @  64102215 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  64324439 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  64324439 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  64463329 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_0 data 1c3029ad
+UVM_INFO @  64546663 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  64546663 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  64713331 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_1 data 149eeebb
+UVM_INFO @  64963333 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  64963333 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  65241113 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_2 data 5ddf0c10
+UVM_INFO @  65435559 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  65435559 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  65463337 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  65463337 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  65463337 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  65463337 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_3 data 69806b23
+UVM_INFO @  65463337 ps: (aes_scoreboard.sv:627) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] adding AES_ECB message item of size 32 to msg_fifo
+UVM_INFO @  65463337 ps: (aes_scoreboard.sv:640) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rebuilding AES_CTR message, adding start item
+UVM_INFO @  65463337 ps: (aes_scoreboard.sv:764) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| printing MESSAGE 
+	 ----| AES MESSAGE ITEM
+	 ----| 
+	 ----| Message Length:       32
+	 ----| AAD Length:           0
+	 ----| Operation:            AES_DEC
+	 ----| Mode:                 AES_ECB
+	 ----| Key Length:           001
+	 ----| Key Share 0:          0c6a97c9 2a7d232a 8801c636 5fa4376f 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1:          d349c247 ef2146fa a3378027 0ef3afba 00000000 00000000 00000000 00000000 
+	 ----| Key Mask:             0
+	 ----| Initialization vector: 79b373f1 70636327 fbec496b 142feba3 
+	 ----| Sideload:             0
+	 ----| Manual Operation:     0
+	
+UVM_INFO @  65463337 ps: (aes_scoreboard.sv:806) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----|   MESSAGE #2 MATCHED  AES_ECB  |-----
+UVM_INFO @  65768895 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  65768895 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  66074453 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  66074453 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  66380011 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  66380011 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  66602235 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  66602235 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  66768903 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  66768903 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  66824459 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  66824459 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  66963349 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CTR
+UVM_INFO @  66963349 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  67102239 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  67102239 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  68102247 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  68102247 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  68657807 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  68657807 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  69268923 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  69268923 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  74685633 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  74685633 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  75907865 ps: (aes_scoreboard.sv:228) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+Write to Trigger register observed: 0x00000001
+UVM_INFO @  75907865 ps: (aes_scoreboard.sv:436) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 AES INPUT ITEM RECEIVED - 
+ 
+	 ----| AES SEQUENCE ITEM                                  |----	 
+	 ----| Item Type:    	 AES_CFG                          |----	 
+	 ----| AES Mode:    	 AES_CBC                          |----	 
+	 ----| Operation:    	 AES_DEC                          |----	 
+	 ----| Key len:    	 128b  	(001)                           |----	 
+	 ----| Key Share 0: 	 b8729871 927022a3 b659f21b e0f10043 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1: 	 7c7020ec 9891021c 4e23dbf5 69812901 00000000 00000000 00000000 00000000 
+	 ----| Initialization vector:         	 2570710d 2a131785 11540b75 40997a9e 
+	 ----| key_mask: 	 1 |----	  	
+	 ----| Data Length: 	  0 |----	  	
+	 ----| Input data:  	 0000008f000000ef0000002600000088 |----	 
+	 ----| Output data: 	 00000000000000000000000000000000 |----	 
+	 
+	 split message: 0
+UVM_INFO @  76296757 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 00
+UVM_INFO @  76296757 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 0 
+	 output lost 0  
+UVM_INFO @  76852317 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 18
+UVM_INFO @  76852317 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 0 
+	 output lost 0  
+UVM_INFO @  77268987 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_2 data 4e35f4cb
+UVM_INFO @  77407877 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_0 data 6da107e6
+UVM_INFO @  77824547 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_3 data 9e4e16b0
+UVM_INFO @  78157883 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_1 data 9c69de59
+UVM_INFO @  78157883 ps: (aes_scoreboard.sv:627) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] adding AES_CTR message item of size 16 to msg_fifo
+UVM_INFO @  78157883 ps: (aes_scoreboard.sv:640) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rebuilding AES_CBC message, adding start item
+UVM_INFO @  78157883 ps: (aes_scoreboard.sv:764) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| printing MESSAGE 
+	 ----| AES MESSAGE ITEM
+	 ----| 
+	 ----| Message Length:       16
+	 ----| AAD Length:           0
+	 ----| Operation:            AES_DEC
+	 ----| Mode:                 AES_CTR
+	 ----| Key Length:           010
+	 ----| Key Share 0:          966f0756 37c0c40f 226ae38e a012d4de a089682b fd6c7ee7 00000000 00000000 
+	 ----| Key Share 1:          c697d920 255cbe66 2a7907cb 44f04668 f9a67483 32fbf358 00000000 00000000 
+	 ----| Key Mask:             0
+	 ----| Initialization vector: f4802413 4530113e d18ca887 06c8b9c3 
+	 ----| Sideload:             0
+	 ----| Manual Operation:     0
+	
+UVM_INFO @  78157883 ps: (aes_scoreboard.sv:806) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----|   MESSAGE #3 MATCHED  AES_CTR  |-----
+UVM_INFO @  78685665 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  78685665 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  80269011 ps: (aes_scoreboard.sv:228) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+Write to Trigger register observed: 0x00000001
+UVM_INFO @  80269011 ps: (aes_scoreboard.sv:436) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 AES INPUT ITEM RECEIVED - 
+ 
+	 ----| AES SEQUENCE ITEM                                  |----	 
+	 ----| Item Type:    	 AES_CFG                          |----	 
+	 ----| AES Mode:    	 AES_CBC                          |----	 
+	 ----| Operation:    	 AES_DEC                          |----	 
+	 ----| Key len:    	 128b  	(001)                           |----	 
+	 ----| Key Share 0: 	 b8729871 927022a3 b659f21b e0f10043 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1: 	 7c7020ec 9891021c 4e23dbf5 69812901 00000000 00000000 00000000 00000000 
+	 ----| Initialization vector:         	 2570710d 2a131785 11540b75 40997a9e 
+	 ----| key_mask: 	 1 |----	  	
+	 ----| Data Length: 	  0 |----	  	
+	 ----| Input data:  	 000000000000e8a986d07d07872ef7ee |----	 
+	 ----| Output data: 	 00000000000000000000000000000000 |----	 
+	 
+	 split message: 0
+UVM_INFO @  80741237 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 19
+UVM_INFO @  80741237 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  81185685 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_3 data 149db588
+UVM_INFO @  81352353 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_1 data c716bdd3
+UVM_INFO @  81685689 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_2 data adea46b0
+UVM_INFO @  81963469 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  81963469 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  81963469 ps: (aes_seq_item.sv:159) [aes_sequence_item] Key Mask 1
+UVM_INFO @  81963469 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_0 data 502efa75
+UVM_INFO @  81963469 ps: (aes_scoreboard.sv:644) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rebuilding AES_CBC message, adding data block #1
+UVM_INFO @  82157915 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  82157915 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  82296805 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  82296805 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  82602363 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  82602363 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  82852365 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  82852365 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  83046811 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  83324591 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  83630149 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  83796817 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  83796817 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  84074597 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  84269043 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  84269043 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  84352377 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  84519045 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  84519045 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  84657935 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  84796825 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  85019049 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  85380163 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  85824611 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  86296837 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  86685729 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  86852397 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  87296845 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  87769071 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  87935739 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  88491299 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  88685745 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  88880191 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  89185749 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  89296861 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  89824643 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  90380203 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  90963541 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  91352433 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  91574657 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  91796881 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  91796881 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  91991327 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  92324663 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  92713555 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  92991335 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  92991335 ps: (aes_scoreboard.sv:436) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 AES INPUT ITEM RECEIVED - 
+ 
+	 ----| AES SEQUENCE ITEM                                  |----	 
+	 ----| Item Type:    	 AES_CFG                          |----	 
+	 ----| AES Mode:    	 AES_CFB                          |----	 
+	 ----| Operation:    	 AES_DEC                          |----	 
+	 ----| Key len:    	 128b  	(001)                           |----	 
+	 ----| Key Share 0: 	 5972f819 46025f54 3d99a42b 80345bf8 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1: 	 6d82a36a 6f45907a 843b6ebd 0a36d096 00000000 00000000 00000000 00000000 
+	 ----| Initialization vector:         	 66018c58 9b36a168 074fe4e6 609d0652 
+	 ----| key_mask: 	 1 |----	  	
+	 ----| Data Length: 	  0 |----	  	
+	 ----| Input data:  	 0000003d000000b000000017000000bb |----	 
+	 ----| Output data: 	 00000000000000000000000000000000 |----	 
+	 
+	 split message: 0
+UVM_INFO @  93435783 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  93435783 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  93574673 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 19
+UVM_INFO @  93574673 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  93658007 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  93658007 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  93741341 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_0 data 446a8410
+UVM_INFO @  93935787 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  93935787 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  94019121 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_2 data e0b8528e
+UVM_INFO @  94241345 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  94241345 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  94491347 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_1 data 1b0f7d63
+UVM_INFO @  94546903 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  94546903 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  94658015 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_3 data 961c6400
+UVM_INFO @  94658015 ps: (aes_scoreboard.sv:627) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] adding AES_CBC message item of size 32 to msg_fifo
+UVM_INFO @  94658015 ps: (aes_scoreboard.sv:640) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rebuilding AES_CFB message, adding start item
+UVM_INFO @  94658015 ps: (aes_scoreboard.sv:764) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| printing MESSAGE 
+	 ----| AES MESSAGE ITEM
+	 ----| 
+	 ----| Message Length:       32
+	 ----| AAD Length:           0
+	 ----| Operation:            AES_DEC
+	 ----| Mode:                 AES_CBC
+	 ----| Key Length:           001
+	 ----| Key Share 0:          b8729871 927022a3 b659f21b e0f10043 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1:          7c7020ec 9891021c 4e23dbf5 69812901 00000000 00000000 00000000 00000000 
+	 ----| Key Mask:             0
+	 ----| Initialization vector: 2570710d 2a131785 11540b75 40997a9e 
+	 ----| Sideload:             0
+	 ----| Manual Operation:     0
+	
+UVM_INFO @  94658015 ps: (aes_scoreboard.sv:806) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----|   MESSAGE #4 MATCHED  AES_CBC  |-----
+UVM_INFO @  94685793 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  94685793 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  94963573 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  94963573 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  95158019 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  95158019 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  95352465 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  95352465 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  95630245 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  95630245 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  95935803 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  95935803 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 1, key clean? 1, IV clean? 1
+UVM_INFO @  95935803 ps: (aes_scoreboard.sv:436) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 AES INPUT ITEM RECEIVED - 
+ 
+	 ----| AES SEQUENCE ITEM                                  |----	 
+	 ----| Item Type:    	 AES_CFG                          |----	 
+	 ----| AES Mode:    	 AES_CFB                          |----	 
+	 ----| Operation:    	 AES_DEC                          |----	 
+	 ----| Key len:    	 128b  	(001)                           |----	 
+	 ----| Key Share 0: 	 5972f819 46025f54 3d99a42b 80345bf8 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1: 	 6d82a36a 6f45907a 843b6ebd 0a36d096 00000000 00000000 00000000 00000000 
+	 ----| Initialization vector:         	 66018c58 9b36a168 074fe4e6 609d0652 
+	 ----| key_mask: 	 1 |----	  	
+	 ----| Data Length: 	  0 |----	  	
+	 ----| Input data:  	 000000000000000000000000000000a3 |----	 
+	 ----| Output data: 	 00000000000000000000000000000000 |----	 
+	 
+	 split message: 0
+UVM_INFO @  96491363 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  96491363 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  96574697 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 19
+UVM_INFO @  96574697 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  96630253 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  96630253 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  96769143 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_0 data 7f125906
+UVM_INFO @  96796921 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  96796921 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  96963589 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_1 data 43ce0dd0
+UVM_INFO @  97074701 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  97074701 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  97269147 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_2 data 4a89ba09
+UVM_INFO @  97324703 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  97324703 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  97519149 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - data_out_3 data 7ace9561
+UVM_INFO @  97519149 ps: (aes_scoreboard.sv:644) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rebuilding AES_CFB message, adding data block #1
+UVM_INFO @  97546927 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  97546927 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  97713595 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  97713595 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  97852485 ps: (aes_scoreboard.sv:397) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| AES Mode: AES_CFB
+UVM_INFO @  97852485 ps: (aes_scoreboard.sv:410) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| data_in_vld? 0, key clean? 1, IV clean? 1
+UVM_INFO @  97963597 ps: (aes_scoreboard.sv:464) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| SAW READ - status data 11
+UVM_INFO @  97963597 ps: (aes_scoreboard.sv:496) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ---| Status read: 
+	 idle 1 
+	 output lost 0  
+UVM_INFO @  97963597 ps: (aes_scoreboard.sv:676) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] finish_message received
+UVM_INFO @  97963597 ps: (aes_scoreboard.sv:681) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] adding AES_CFB message item of size 32 to msg_fifo
+UVM_INFO @  97963597 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @  97963597 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @  97963597 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @  97963597 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @  97963597 ps: (aes_scoreboard.sv:764) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----| printing MESSAGE 
+	 ----| AES MESSAGE ITEM
+	 ----| 
+	 ----| Message Length:       32
+	 ----| AAD Length:           0
+	 ----| Operation:            AES_DEC
+	 ----| Mode:                 AES_CFB
+	 ----| Key Length:           001
+	 ----| Key Share 0:          5972f819 46025f54 3d99a42b 80345bf8 00000000 00000000 00000000 00000000 
+	 ----| Key Share 1:          6d82a36a 6f45907a 843b6ebd 0a36d096 00000000 00000000 00000000 00000000 
+	 ----| Key Mask:             0
+	 ----| Initialization vector: 66018c58 9b36a168 074fe4e6 609d0652 
+	 ----| Sideload:             0
+	 ----| Manual Operation:     0
+	
+UVM_INFO @  97963597 ps: (aes_scoreboard.sv:806) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----|   MESSAGE #5 MATCHED  AES_CFB  |-----
+UVM_INFO @ 106713651 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 106713651 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 106713651 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 106713651 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 109713651 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 109713651 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 109713651 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 109713651 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 111713651 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 111713651 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 111713651 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 111713651 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 113713651 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 113713651 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 113713651 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 113713651 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 115713651 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 115713651 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 115713651 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 115713651 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 117713651 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 117713651 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 117713651 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 117713651 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 121130425 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 121130425 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 121130425 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 121130425 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 123130425 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 123130425 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 123130425 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 123130425 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 126574913 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 126574913 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 126574913 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 126574913 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 128574913 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 128574913 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 128574913 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 128574913 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 130574913 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 130574913 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 130574913 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 130574913 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 132574913 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 132574913 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 132574913 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 132574913 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 134574913 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 134574913 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 134574913 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 134574913 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 139630573 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 139630573 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 139630573 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 139630573 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 141630573 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 141630573 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 141630573 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 141630573 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 143630573 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 143630573 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 143630573 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 143630573 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 145630573 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 145630573 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 145630573 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 145630573 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 147630573 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 147630573 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 147630573 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 147630573 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 152102895 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 152102895 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 152102895 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 152102895 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 154102895 ps: (aes_scoreboard.sv:864) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] item fifo entries           0
+UVM_INFO @ 154102895 ps: (aes_scoreboard.sv:865) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_queue entries           0
+UVM_INFO @ 154102895 ps: (aes_scoreboard.sv:866) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] rcv_aad_queue entries           0
+UVM_INFO @ 154102895 ps: (aes_scoreboard.sv:867) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] msg fifo entries           0
+UVM_INFO @ 158158499 ps: (aes_scoreboard.sv:965) uvm_test_top.env.scoreboard [uvm_test_top.env.scoreboard] 
+	 ----|        TEST FINISHED        |----
+	 ----| Expected:           6
+	 ----| Seen:               6
+	 ----| Expected corrupted: 0
+	 ----| Seen corrupted:     0
+	 ----| Skipped:            0
+	 ----| Split:              0
+	 ---------------------------------------
+	 ----            TEST PASSED        ----
+	 ---------------------------------------
+UVM_INFO @ 158158499 ps: (uvm_report_catcher.svh:705) [UVM/REPORT/CATCHER] 
+--- UVM Report catcher Summary ---
+
+
+Number of demoted UVM_FATAL reports  :    0
+Number of demoted UVM_ERROR reports  :    0
+Number of demoted UVM_WARNING reports:    0
+Number of caught UVM_FATAL reports   :    0
+Number of caught UVM_ERROR reports   :    0
+Number of caught UVM_WARNING reports :    0
+
+UVM_INFO @ 158158499 ps: (uvm_report_server.svh:847) [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+Quit count :     0 of     1
+** Report counts by severity
+UVM_INFO :  549
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[RNTST]     1
+[UVM/REPORT/CATCHER]     1
+[aes_sequence_item]    17
+[cfg]     3
+[uvm_test_top.env.scoreboard]   526
+[uvm_test_top.env.virtual_sequencer.aes_stress_vseq]     1
+
+
+TEST PASSED CHECKS
+ _____         _                                  _ _ 
+|_   _|__  ___| |_   _ __   __ _ ___ ___  ___  __| | |
+  | |/ _ \/ __| __| | '_ \ / _` / __/ __|/ _ \/ _` | |
+  | |  __/\__ \ |_  | |_) | (_| \__ \__ \  __/ (_| |_|
+  |_|\___||___/\__| | .__/ \__,_|___/___/\___|\__,_(_)
+                    |_|                               
+
+** Note: $finish    : /cadtools/mentor/Questa_2025.2/questasim/verilog_src/uvm-1.2/src/base/uvm_root.svh(517)
+   Time: 158158499 ps  Iteration: 66  Instance: /tb
+End time: 12:59:43 on Nov 20,2026, Elapsed time: 0:00:37
+Errors: 0, Warnings: 7
+End time: 12:59:43 on Nov 20,2026, Elapsed time: 0:00:43
+*** Summary *********************************************
+    qrun: Errors:   0, Warnings:   0
+    vsim: Errors:   0, Warnings:  70
+  Totals: Errors:   0, Warnings:  70

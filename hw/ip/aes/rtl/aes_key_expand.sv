@@ -80,9 +80,9 @@ module aes_key_expand import aes_pkg::*;
   //////////////////////////////////////////////////////
   // Irregular part involving Rcon, RotWord & SubWord //
   //////////////////////////////////////////////////////
-
+  
   // Depending on key length and round, RotWord may not be used.
-  assign use_rot_word = (key_len_i == AES_256 && rnd[0] == 1'b0) ? 1'b0 : 1'b1;
+  assign use_rot_word = 1'b1;
 
   // Depending on operation, key length and round, Rcon may not be used thus must not be updated.
   always_comb begin : rcon_usage
@@ -95,12 +95,8 @@ module aes_key_expand import aes_pkg::*;
         use_rcon = 1'b0;
       end
     end
-
-    if (key_len_i == AES_256 && rnd[0] == 1'b0) begin
-      use_rcon = 1'b0;
-    end
   end
-
+  
   // Generate Rcon
   always_comb begin : rcon_update
     rcon_d = rcon_q;
